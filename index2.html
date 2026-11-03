@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Learning Hub</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <h2 class="logo">JS<span>Hub</span></h2>
+
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#lessons">Lessons</a></li>
+          <li><a href="#practice">Practice</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-content">
+          <p class="tag">YOUR CODING JOURNEY STARTS HERE</p>
+          <h1>Learn JavaScript <span>Step by Step</span></h1>
+          <p>
+            Learn programming fundamentals, write your first code, and build
+            interactive websites.
+          </p>
+          <a href="#lessons" class="btn">Start Learning</a>
+        </div>
+      </section>
+
+      <section class="lessons section" id="lessons">
+        <div class="section-heading">
+          <h2>JavaScript Fundamentals</h2>
+          <p>Start with these essential concepts.</p>
+        </div>
+
+        <div class="lesson-grid">
+          <article class="lesson-card">
+            <div class="lesson-icon">01</div>
+            <h3>Introduction</h3>
+            <p>Understand JavaScript and how it makes websites interactive.</p>
+            <pre><code>console.log("Hello World!");</code></pre>
+          </article>
+
+          <article class="lesson-card">
+            <div class="lesson-icon">02</div>
+            <h3>Variables</h3>
+            <p>Learn how to store and work with information.</p>
+            <pre><code>const name = "David";
+let age = 20;</code></pre>
+          </article>
+
+          <article class="lesson-card">
+            <div class="lesson-icon">03</div>
+            <h3>Functions</h3>
+            <p>Organize reusable instructions into functions.</p>
+            <pre><code>function greet() {
+  return "Hello!";
+}</code></pre>
+          </article>
+
+          <article class="lesson-card">
+            <div class="lesson-icon">04</div>
+            <h3>Conditions</h3>
+            <p>Make decisions using if and else statements.</p>
+            <pre><code>let score = 80;
+
+if (score >= 50) {
+  console.log("Passed");
+}</code></pre>
+          </article>
+
+          <article class="lesson-card">
+            <div class="lesson-icon">05</div>
+            <h3>Loops</h3>
+            <p>Repeat instructions using loops.</p>
+            <pre><code>for (let i = 1; i <= 5; i++) {
+  console.log(i);
+}</code></pre>
+          </article>
+
+          <article class="lesson-card">
+            <div class="lesson-icon">06</div>
+            <h3>DOM Manipulation</h3>
+            <p>Use JavaScript to change webpage content.</p>
+            <pre><code>document.querySelector("h1")
+  .textContent = "Welcome!";</code></pre>
+          </article>
+        </div>
+      </section>
+
+      <section class="practice section" id="practice">
+        <div class="section-heading">
+          <h2>Practice JavaScript</h2>
+          <p>Try your first interactive JavaScript exercise.</p>
+        </div>
+
+        <div class="practice-box">
+          <h3>Exercise 1: Say Hello</h3>
+          <p>Enter your name and click the button.</p>
+
+          <label for="username">Your name</label>
+          <input type="text" id="username" placeholder="Enter your name" />
+
+          <button
+            id="greetButton"
+            class="btn"
+            onclick="alert('Hello Natheniel')"
+          >
+            Run JavaScript
+          </button>
+
+          <p id="output" class="output" aria-live="polite">
+            Your result will appear here.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 JS Hub. Learn, practise, and build.</p>
+    </footer>
+
+    <script>
+      const nameInput = document.getElementById("username");
+      const greetButton = document.getElementById("greetButton");
+      const output = document.getElementById("output");
+
+      greetButton.addEventListener("click", function () {
+        const name = nameInput.value.trim();
+
+        if (name === "") {
+          output.textContent = "Please enter your name first.";
+        } else {
+          output.textContent = `Hello, ${name}! Welcome to JavaScript.`;
+        }
+      });
+
+      // "Values in Javascript, we have Primitive and Non-primitive values";
+      // Primitive = {String; Boolean; Numbers, Big Integers}
+      // Non-Primitive = {Arrays, Objects}
+
+      // Strigs = "Nathaniel"
+      // Numbers = "30"
+      // Boolean = "True or False"
+      // BigInt = "124354657687979800-70658474363652525378"
+
+      // Array = {2, 3, 4, 5, 6, 7, 8}
+      // Arrays = {"Milk", "Grapes", "Drinks",}
+
+      // let MyName = "Nathaniel",
+    </script>
+  </body>
+</html>
